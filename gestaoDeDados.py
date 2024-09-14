@@ -1,106 +1,85 @@
-print("Olá!Seja bem vindo ao menu principal")
+Estudantes = 1
+Disciplinas = 2
+Professores = 3
+Turmas = 4
+Matriculas = 5
 
-menuPrincipal = int(input(f"Escolha qual opção deseja acessar: 1. Estudantes, 2. Disciplinas, 3. Professores, 4. Turmas, 5. Matrículas, 6. Sair"))
+op1 = 1
+op2 = 2
+op3 = 3
+op4 = 4
+op5 = 5
 
-#Verifica Estudantes
+menuPrincipal: str = "Menu principal: 1. Estudantes, 2. Disciplinas, 3. Professores, 4. Turmas, 5. Matrículas, 6. Sair"
+menuDeOperacoes: str  = "Menu de operações: 1. Incluir 2. Listar 3. Atualizar 4. Exluir 5. Voltar ao menu principal"
 
-if menuPrincipal == 1:
-        print("A opção escolhida foi: Opção 1. Estudantes. Escolha o que deseja fazer em seguida: 1. Incluir 2. Listar 3. Atualizar 4. Exluir 5. Voltar ao menu principal")
+print("Olá! Seja bem vindo ao sistema de gestão de dados")
 
-        escolhaEstudantes = int(input("Escolha uma opção:"))
+while True:
 
-        if escolhaEstudantes == 1:
-            print("Você escolheu a opção 1: Incluir")
-        elif escolhaEstudantes == 2:
-                print("Você escolheu a opção 2: Listar")
-        elif escolhaEstudantes == 3:
-                print("Você escolheu a opção 3: Atualizar")
-        elif escolhaEstudantes == 4:
-                print("Você escolheu a opção 2: Excluir")
-        elif escolhaEstudantes == 5:
-                print("Voltando ao menu principal...")
+    print(menuPrincipal)
+
+    inputUser = int(input("Escolha qual opção deseja acessar:"))
+
+    if inputUser == 1:
+        print("A opção escolhida foi: Opção 1. Estudantes")
+    elif inputUser == 2:
+        print("A opção escolhida foi: Disciplinas.")
+    elif inputUser == 3:
+        print("A opção escolhida foi: Professores.")
+    elif inputUser == 4:
+        print("A opção escolhida foi: Turmas.")
+    elif inputUser == 5:
+        print("A opção escolhida foi: Matrículas.")
+    elif inputUser == 6:
+        print("Saindo do sistema")
+        break
+    else:
+        print("Opção inválida, escolha novamente.")
+        continue
+    break
+
+while True:
+
+    print(menuDeOperacoes)
+
+    inputOperacao = int(input("Escolha qual opção deseja acessar:"))
+
+    if inputOperacao == 1:
+        print("Opção 1: Incluir")
+        continue
+    elif inputOperacao == 2:
+        print("Opção 2: Listar")
+        continue
+    elif inputOperacao == 3:
+        print("Opção 3: Atualizar")
+        continue
+    elif inputOperacao == 4:
+        print("Opção 4: Excluir")
+        continue
+    else:
+        if inputOperacao == 5:
+            print("Voltar ao menu principal")
+
+        print(menuPrincipal)
+        inputUser = int(input("Escolha qual opção deseja acessar:"))
+
+        if inputUser == 1:
+            print("A opção escolhida foi: Opção 1. Estudantes")
+        elif inputUser == 2:
+            print("A opção escolhida foi: Disciplinas.")
+        elif inputUser == 3:
+            print("A opção escolhida foi: Professores.")
+        elif inputUser == 4:
+            print("A opção escolhida foi: Turmas.")
+        elif inputUser == 5:
+            print("A opção escolhida foi: Matrículas.")
+        elif inputUser == 6:
+            print("Saindo do sistema")
+            break
         else:
-            print("Opção inválida.")
-
-    # Verifica Disciplinas
-
-if menuPrincipal == 2:
-        print("A opção escolhida foi: Disciplinas. Escolha o que deseja fazer em seguida: 1. Incluir 2. Listar 3. Atualizar 4. Exluir 5. Voltar ao menu principal")
-
-        escolhaDisciplinas = int(input("Escolha uma opção:"))
-
-        if escolhaDisciplinas == 1:
-            print("Você escolheu a opção 1: Incluir")
-        elif escolhaDisciplinas == 2:
-            print("Você escolheu a opção 2: Listar")
-        elif escolhaDisciplinas == 3:
-            print("Você escolheu a opção 3: Atualizar")
-        elif escolhaDisciplinas == 4:
-            print("Você escolheu a opção 2: Excluir")
-        elif escolhaDisciplinas == 5:
-            print("Voltando ao menu principal...")
-        else:
-            print("Opção inválida.")
-
-#Verifica Professores
-
-if menuPrincipal == 3:
-        print("A opção escolhida foi: Professores. Escolha o que deseja fazer em seguida: 1. Incluir 2. Listar 3. Atualizar 4. Exluir 5. Voltar ao menu principal")
-
-        escolhaProfessores = int(input("Escolha uma opção:"))
-
-        if escolhaProfessores == 1:
-            print("Você escolheu a opção 1: Incluir")
-        elif escolhaProfessores == 2:
-            print("Você escolheu a opção 2: Listar")
-        elif escolhaProfessores == 3:
-            print("Você escolheu a opção 3: Atualizar")
-        elif escolhaProfessores == 4:
-            print("Você escolheu a opção 2: Excluir")
-        elif escolhaProfessores == 5:
-            print("Voltando ao menu principal...")
-        else:
-            print("Opção inválida.")
-
-#Verifica Turmas
-
-if menuPrincipal == 4:
-        print("A opção escolhida foi: Turmas. Escolha o que deseja fazer em seguida: 1. Incluir 2. Listar 3. Atualizar 4. Exluir 5. Voltar ao menu principal")
-
-        escolhaTurmas = int(input("Escolha uma opção:"))
-
-        if escolhaTurmas == 1:
-            print("Você escolheu a opção 1: Incluir")
-        elif escolhaTurmas == 2:
-            print("Você escolheu a opção 2: Listar")
-        elif escolhaTurmas == 3:
-            print("Você escolheu a opção 3: Atualizar")
-        elif escolhaTurmas == 4:
-            print("Você escolheu a opção 2: Excluir")
-        elif escolhaTurmas == 5:
-            print("Voltando ao menu principal...")
-        else:
-            print("Opção inválida.")
-
-#Verifica Matrículas
-
-if menuPrincipal == 5:
-        print("A opção escolhida foi: Matrículas. Escolha o que deseja fazer em seguida: 1. Incluir 2. Listar 3. Atualizar 4. Exluir 5. Voltar ao menu principal")
-
-        escolhaMatriculas = int(input("Escolha uma opção:"))
-
-        if escolhaMatriculas == 1:
-            print("Você escolheu a opção 1: Incluir")
-        elif escolhaMatriculas == 2:
-            print("Você escolheu a opção 2: Listar")
-        elif escolhaMatriculas == 3:
-            print("Você escolheu a opção 3: Atualizar")
-        elif escolhaMatriculas == 4:
-            print("Você escolheu a opção 2: Excluir")
-        elif escolhaMatriculas == 5:
-            print("Voltando ao menu principal...")
-        else:
-            print("Opção inválida.")
+            print("Opção inválida, digite novamente.")
+        continue
 
 print("Fim da aplicação.")
 
