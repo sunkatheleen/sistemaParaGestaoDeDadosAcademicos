@@ -1,17 +1,10 @@
-Estudantes = 1
-Disciplinas = 2
-Professores = 3
-Turmas = 4
-Matriculas = 5
-
-op1 = 1
-op2 = 2
-op3 = 3
-op4 = 4
-op5 = 5
+#Nome: Katheleen Meneses Santiago
+#Curso: Análise e Desenvolvimento de Sistemas PUC-PR, campus Londrina
 
 menuPrincipal: str = "Menu principal: 1. Estudantes, 2. Disciplinas, 3. Professores, 4. Turmas, 5. Matrículas, 6. Sair"
 menuDeOperacoes: str  = "Menu de operações: 1. Incluir 2. Listar 3. Atualizar 4. Exluir 5. Voltar ao menu principal"
+
+estudantes = []
 
 print("Olá! Seja bem vindo ao sistema de gestão de dados")
 
@@ -19,67 +12,66 @@ while True:
 
     print(menuPrincipal)
 
-    inputUser = int(input("Escolha qual opção deseja acessar:"))
+    try:
+        inputUser = int(input("Escolha qual opção deseja acessar:"))
+    except ValueError:
+        print("Entrada inválida. Por favor, insira um número.")
+        continue
 
     if inputUser == 1:
         print("A opção escolhida foi: Opção 1. Estudantes")
-    elif inputUser == 2:
-        print("A opção escolhida foi: Disciplinas.")
-    elif inputUser == 3:
-        print("A opção escolhida foi: Professores.")
-    elif inputUser == 4:
-        print("A opção escolhida foi: Turmas.")
-    elif inputUser == 5:
-        print("A opção escolhida foi: Matrículas.")
+
+        while True:
+            print(menuDeOperacoes)
+
+            try:
+                inputOperacao = int(input("Escolha qual opção deseja acessar (número): "))
+            except ValueError:
+                print("Entrada inválida. Por favor, insira um número.")
+                continue
+
+            if inputOperacao == 1:
+                print("Você escolheu a opção 1. Incluir")
+                nomeEstudante = input("Digite o nome do estudante: ")
+                estudantes.append(nomeEstudante)
+                print(f"Estudante {nomeEstudante} incluído com sucesso!")
+
+            elif inputOperacao == 2:
+                print("Você escolheu a opção 2. Listar")
+                if len(estudantes) == 0:
+                    print("Não há estudantes cadastrados.")
+                else:
+                    print("Lista de estudantes:")
+                    for estudante in estudantes:
+                        print(estudante)
+
+            elif inputOperacao == 3:
+                print("Opção 3: Atualizar - EM DESENVOLVIMENTO")
+
+            elif inputOperacao == 4:
+                print("Opção 4: Excluir - EM DESENVOLVIMENTO")
+
+            elif inputOperacao == 5:
+                break
+
+            else:
+                print("Opção inválida, escolha novamente.")
+
+    elif inputUser in [2, 3, 4, 5]:
+        print(f"A opção escolhida foi: Opção {inputUser} - EM DESENVOLVIMENTO")
+
     elif inputUser == 6:
-        print("Saindo do sistema")
+        print("Saindo do sistema.")
         break
+
     else:
         print("Opção inválida, escolha novamente.")
-        continue
-    break
-
-while True:
-
-    print(menuDeOperacoes)
-
-    inputOperacao = int(input("Escolha qual opção deseja acessar:"))
-
-    if inputOperacao == 1:
-        print("Opção 1: Incluir")
-        continue
-    elif inputOperacao == 2:
-        print("Opção 2: Listar")
-        continue
-    elif inputOperacao == 3:
-        print("Opção 3: Atualizar")
-        continue
-    elif inputOperacao == 4:
-        print("Opção 4: Excluir")
-        continue
-    else:
-        if inputOperacao == 5:
-            print("Voltar ao menu principal")
-
-        print(menuPrincipal)
-        inputUser = int(input("Escolha qual opção deseja acessar:"))
-
-        if inputUser == 1:
-            print("A opção escolhida foi: Opção 1. Estudantes")
-        elif inputUser == 2:
-            print("A opção escolhida foi: Disciplinas.")
-        elif inputUser == 3:
-            print("A opção escolhida foi: Professores.")
-        elif inputUser == 4:
-            print("A opção escolhida foi: Turmas.")
-        elif inputUser == 5:
-            print("A opção escolhida foi: Matrículas.")
-        elif inputUser == 6:
-            print("Saindo do sistema")
-            break
-        else:
-            print("Opção inválida, digite novamente.")
-        continue
 
 print("Fim da aplicação.")
+
+
+
+
+
+
 

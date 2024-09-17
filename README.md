@@ -26,3 +26,6 @@
 
 Observação: O sistema deve obrigatoriamente fechar sempre que o usuário selecionar a opção cadastral e a funcionalidade. As opções “Sair” e “Voltar ao menu principal” ficarão sem funcionalidade por enquanto.
 
+O segundo commit implementou a utilização de estruturas condicionais para mostrar na tela a escolha do usuário.
+
+O terceiro commit está sendo feito com uma limpeza e otimização do código, implementando também o conceito estudado na unidade 4: lista para a manipulação de dados.
